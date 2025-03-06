@@ -21,7 +21,9 @@ public class Main implements Runnable {
 
     @Override
     public void run() {
-        LazyInitializedSingleton lis = LazyInitializedSingleton.getInstance();
-        System.out.printf("Hello world from %s: Code: %d%n ", this.threadname,lis.hashCode());
+        //LazyInitializedSingleton lis = LazyInitializedSingleton.getInstance();
+        //System.out.printf("Hello world from %s: Code: %d%n ", this.threadname,lis.hashCode());
+        ThreadSafeSingleton tis = ThreadSafeSingleton.getInstance();
+        System.out.printf("hello World from %s: Code %d%n", this.threadname,tis.hascode());
     }
 }
